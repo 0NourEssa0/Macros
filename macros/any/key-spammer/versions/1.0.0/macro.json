@@ -1,0 +1,5 @@
+[
+  { "kind": "step", "data": { "type": "key", "event": "hold", "key": "{{key}}", "duration": 0.05, "time": 0 } },
+  { "kind": "wait", "seconds": "{{interval_seconds}}" },
+  { "kind": "loop", "count": "inf", "speed": 1, "wait": 0 }
+]

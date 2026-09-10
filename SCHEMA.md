@@ -22,10 +22,12 @@ unknown field is preserved but ignored.
 | `game.url` | string | Link to the game. |
 | `tags` | string[] | Shown on the card and as sidebar filter chips. Max 12. |
 | `keywords` | string[] | Searched, never displayed. Put the words people actually type here. |
-| `author.name` | string | **Required.** Publisher name or handle. |
+| `author.name` | string | The publishing account. **Stamped by the server** — not read from the app. |
 | `author.url` | string | Link shown on the detail page. |
 | `author.github` | string | GitHub handle, if you want the credit. |
-| `version` | string | `1.0.0`. Bump it and the app offers everyone an **Update**. |
+| `owner` | string | The account that owns the listing; only it may publish updates. **Stamped by the server.** An owner starting with `@` is a reserved official listing. |
+| `version` | string | The latest release, e.g. `1.0.0`. Bump it and the app offers everyone an **Update**. |
+| `versions` | object[] | Every release, newest first. See below. |
 | `license` | string | `MIT`, `CC0`, `CC BY 4.0`, `All rights reserved`. |
 | `created_at` / `updated_at` | ISO 8601 | Set automatically when published from the app. |
 | `requires.mode` | `pid` \| `global` \| `""` | Applied automatically on Launch. |
@@ -35,6 +37,27 @@ unknown field is preserved but ignored.
 | `stats.tools` | string[] | Tool kinds used, computed on publish. |
 | `config` | object[] | The knobs a user can set before installing. See below. |
 | `macro_file` | string | Defaults to `macro.json`. |
+
+## versions
+
+```json
+"versions": [
+  { "version": "1.1.0", "published_at": "2026-09-10T18:00:00Z",
+    "notes": "Handles the new reel bar colours.", "steps": 18, "author": "marina" },
+  { "version": "1.0.0", "published_at": "2026-08-02T09:12:00Z",
+    "notes": "First release.", "steps": 16, "author": "marina" }
+]
+```
+
+Newest first. Each entry has a folder under `versions/<version>/` holding the manifest
+and macro exactly as they were at that release, so the app can install any of them —
+the detail page lists them all and the Configure sheet has a version picker.
+
+`notes` is what the publisher wrote in **What changed in this version**; it is shown
+beside the version in the app, so it is worth filling in.
+
+A listing published before versioning existed carries only `version`; the app reads it
+as a one-entry history rather than failing.
 
 ## config entries
 
