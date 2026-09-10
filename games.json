@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "comment": "Optional per-game presentation. A macro's own manifest wins; this only fills gaps and keeps icons consistent across publishers.",
+  "games": [
+    { "slug": "roblox", "name": "Roblox", "title": "Roblox (any experience)", "icon": "🎮", "platform": "Roblox", "url": "https://www.roblox.com/" },
+    { "slug": "fisch",  "name": "Fisch",  "title": "Fisch (Roblox)",          "icon": "🎣", "platform": "Roblox", "url": "" },
+    { "slug": "any",    "name": "Any game", "title": "Any game",             "icon": "🕹️", "platform": "PC",     "url": "" }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "roblox/afk-anti-idle",
+  "path": "macros/roblox/afk-anti-idle",
+  "slug": "afk-anti-idle",
+  "title": "AFK anti-idle",
+  "description": "Taps space every couple of minutes so Roblox never disconnects you for being idle. Runs in the background — you can keep using your Mac.",
+  "details": "Roblox disconnects a session after roughly twenty minutes without input. This macro sends one short space tap, waits, and repeats forever.\n\nIt runs in PID mode, so the key goes to the Roblox process by process id — the window does not need to be focused and your cursor is never moved.\n\nSet \"Seconds between presses\" to anything below the idle timeout; 120 is a safe default. If you are standing somewhere you can fall from, face a wall first — space makes your character jump.",
+  "game": {
+    "name": "Roblox",
+    "title": "Roblox (any experience)",
+    "slug": "roblox",
+    "icon": "🎮",
+    "platform": "Roblox",
+    "url": "https://www.roblox.com/"
+  },
+  "tags": ["afk", "anti-idle", "utility", "background"],
+  "keywords": ["idle", "kick", "disconnect", "twenty minutes", "jump", "space", "farm", "overnight"],
+  "author": { "name": "AutoKey Studio", "url": "https://sologrinding.com/", "github": "" },
+  "version": "1.0.0",
+  "license": "MIT",
+  "created_at": "2026-09-10T00:00:00Z",
+  "updated_at": "2026-09-10T00:00:00Z",
+  "requires": { "mode": "pid", "app": "RobloxPlayer", "platform": "Roblox", "app_version": "" },
+  "stats": { "steps": 3, "tools": ["loop", "step", "wait"], "duration": 0 },
+  "config": [
+    { "key": "idle_seconds", "label": "Seconds between presses", "type": "number", "default": "120",
+      "help": "Anything under the idle timeout. 120 is safe." }
+  ],
+  "macro_file": "macro.json"
+}
