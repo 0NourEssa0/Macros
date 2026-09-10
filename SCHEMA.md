@@ -18,6 +18,7 @@ unknown field is preserved but ignored.
 | `game.slug` | string | URL-safe game name; the first path segment. |
 | `game.icon` | string | One emoji — the tile in the library. |
 | `game.icon_url` | string | Optional image URL used instead of the emoji. |
+| `thumbnail` | string | **Optional.** `https://` link to a screenshot or banner. Shown across the top of the card and above the detail page. A non-https link is dropped when read, and one that fails to load removes itself rather than showing a broken tile. |
 | `game.platform` | string | `Roblox`, `Steam`, `PC`, `Minecraft`, `Browser`, `Mobile`, `Other`. |
 | `game.url` | string | Link to the game. |
 | `tags` | string[] | Shown on the card and as sidebar filter chips. Max 12. |
