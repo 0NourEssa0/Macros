@@ -29,8 +29,26 @@ unknown field is preserved but ignored.
 | `owner` | string | The account that owns the listing; only it may publish updates. **Stamped by the server.** An owner starting with `@` is a reserved official listing. |
 | `version` | string | The latest release, e.g. `1.0.0`. Bump it and the app offers everyone an **Update**. |
 | `versions` | object[] | Every release, newest first. See below. |
-| `stars` | number | How many people have starred it. **Server-maintained** — the database is the live count and this is a periodic mirror, so don't edit it by hand. |
-| `pinned` | boolean | Pinned listings sort to the front of every view. **Set this by hand** in `index.json` to feature a macro; the server reads it back so a publish won't wipe it. `"pin": true` works too. |
+| `stars` | number | How many people have starred it — the length of this macro's list in `stars.json`. Written by the server when it flushes; edit `stars.json` instead. |
+| `pinned` | boolean | Pinned listings sort to the front of every view. **Set this by hand** to feature a macro; the server carries it forward so a publish won't wipe it. `"pin": true` works too. |
+
+# stars.json
+
+Who starred what, at the repo root. The roster — not a count — is what stops one
+account starring twice, and it is why stars need no database at all.
+
+```json
+{
+  "schema": 1,
+  "generated_at": "2026-09-11T02:14:00Z",
+  "macros": { "fisch/fisch-macro-background": ["XoX"] }
+}
+```
+
+The `stars` number on each listing is just the length of its list here. Stars are
+committed in batches rather than one per click, so a count can be a couple of minutes
+behind — the app shows your own star immediately and reconciles when the repo catches up.
+`tools/build_macro_index.py` recomputes the counts from this file.
 | `license` | string | `MIT`, `CC0`, `CC BY 4.0`, `All rights reserved`. |
 | `created_at` / `updated_at` | ISO 8601 | Set automatically when published from the app. |
 | `requires.mode` | `pid` \| `global` \| `""` | Applied automatically on Launch. |
