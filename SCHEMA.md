@@ -29,6 +29,8 @@ unknown field is preserved but ignored.
 | `owner` | string | The account that owns the listing; only it may publish updates. **Stamped by the server.** An owner starting with `@` is a reserved official listing. |
 | `version` | string | The latest release, e.g. `1.0.0`. Bump it and the app offers everyone an **Update**. |
 | `versions` | object[] | Every release, newest first. See below. |
+| `stars` | number | How many people have starred it. **Server-maintained** — the database is the live count and this is a periodic mirror, so don't edit it by hand. |
+| `pinned` | boolean | Pinned listings sort to the front of every view. **Set this by hand** in `index.json` to feature a macro; the server reads it back so a publish won't wipe it. `"pin": true` works too. |
 | `license` | string | `MIT`, `CC0`, `CC BY 4.0`, `All rights reserved`. |
 | `created_at` / `updated_at` | ISO 8601 | Set automatically when published from the app. |
 | `requires.mode` | `pid` \| `global` \| `""` | Applied automatically on Launch. |
