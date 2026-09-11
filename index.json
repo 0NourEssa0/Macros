@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-11T02:37:22Z",
+  "generated_at": "2026-09-11T02:56:51Z",
   "count": 3,
   "repo": {
     "owner": "0NourEssa0",
@@ -181,7 +181,7 @@
           "label": "Missing"
         }
       ],
-      "stars": 1,
+      "stars": 0,
       "pinned": true,
       "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
       "icon_url": "",
