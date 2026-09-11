@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-10T19:08:39Z",
-  "count": 2,
+  "generated_at": "2026-09-11T01:41:10Z",
+  "count": 1,
   "repo": {
     "owner": "0NourEssa0",
     "name": "Macros",
@@ -9,19 +9,10 @@
   },
   "games": [
     {
-      "slug": "any",
-      "name": "Any game",
-      "title": "Any game",
-      "icon": "🕹️",
-      "icon_url": "",
-      "platform": "PC",
-      "count": 1
-    },
-    {
-      "slug": "roblox",
-      "name": "Roblox",
-      "title": "Roblox (any experience)",
-      "icon": "🎮",
+      "slug": "fisch",
+      "name": "Fisch",
+      "title": "Fisch",
+      "icon": "🐟",
       "icon_url": "",
       "platform": "Roblox",
       "count": 1
@@ -29,15 +20,11 @@
   ],
   "tags": [
     {
-      "tag": "utility",
-      "count": 2
-    },
-    {
       "tag": "afk",
       "count": 1
     },
     {
-      "tag": "anti-idle",
+      "tag": "auto",
       "count": 1
     },
     {
@@ -45,180 +32,120 @@
       "count": 1
     },
     {
-      "tag": "spam",
+      "tag": "fisch",
       "count": 1
     },
     {
-      "tag": "starter",
+      "tag": "Fishing",
       "count": 1
     },
     {
-      "tag": "template",
+      "tag": "roblox",
       "count": 1
     }
   ],
   "macros": [
     {
-      "id": "any/key-spammer",
-      "path": "macros/any/key-spammer",
-      "slug": "key-spammer",
-      "title": "Key spammer",
-      "description": "Taps one key over and over at a rate you choose. The plain starting point for any grind that is just \"hold this button\".",
-      "details": "Pick the key and how long to wait between taps, then Launch. Everything after that is the usual macro — open it in the timeline if you want to add a colour check, a loop count, or a second key.\n\nInstalled in PID mode it sends the key to a chosen app in the background. Switch to Global if the game ignores background keys.",
+      "id": "fisch/fisch-macro-background",
       "game": {
-        "name": "Any game",
-        "title": "Any game",
-        "slug": "any",
-        "icon": "🕹️",
+        "url": "",
+        "icon": "🐟",
+        "name": "Fisch",
+        "slug": "fisch",
+        "title": "Fisch",
         "icon_url": "",
-        "platform": "PC",
-        "url": ""
+        "platform": "Roblox"
       },
+      "path": "macros/fisch/fisch-macro-background",
+      "slug": "fisch-macro-background",
       "tags": [
-        "starter",
-        "spam",
-        "utility",
-        "template"
+        "Fishing",
+        "afk",
+        "auto",
+        "background",
+        "fisch",
+        "roblox"
       ],
-      "keywords": [
-        "autoclicker",
-        "repeat",
-        "grind",
-        "press",
-        "hold",
-        "rate",
-        "interval"
-      ],
-      "author": {
-        "name": "AutoKey Studio",
-        "url": "https://sologrinding.com/",
-        "github": ""
-      },
-      "owner": "@autokeystudio",
-      "version": "1.0.0",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "published_at": "2026-09-10T00:00:00Z",
-          "notes": "First release.",
-          "steps": 3,
-          "author": "AutoKey Studio"
-        }
-      ],
-      "license": "MIT",
-      "created_at": "2026-09-10T00:00:00Z",
-      "updated_at": "2026-09-10T00:00:00Z",
-      "requires": {
-        "mode": "pid",
-        "app": "",
-        "platform": "",
-        "app_version": ""
-      },
+      "owner": "XoX",
       "stats": {
-        "steps": 3,
+        "steps": 240,
         "tools": [
+          "bootgroup",
+          "compare",
+          "group",
+          "headless",
           "loop",
+          "math",
+          "runmode",
           "step",
-          "wait"
+          "trackbar",
+          "variable",
+          "wait",
+          "window"
         ],
         "duration": 0
       },
+      "title": "Fisch Macro (Background)",
+      "author": {
+        "url": "",
+        "name": "XoX",
+        "github": ""
+      },
       "config": [
         {
-          "key": "key",
-          "label": "Key to press",
+          "key": "Fish",
+          "var": "Fish",
+          "help": "Amount of fish you have fished so far you can use a discord webhook tool to rely information about progress",
           "type": "text",
-          "default": "e",
-          "help": "One key name, e.g. e, space, f1."
+          "label": "Fish"
         },
         {
-          "key": "interval_seconds",
-          "label": "Seconds between presses",
-          "type": "number",
-          "default": "1",
-          "help": "0.1 is ten a second. Very low values can trip a game's anti-cheat."
-        }
-      ],
-      "macro_file": "macro.json",
-      "schema": 1
-    },
-    {
-      "id": "roblox/afk-anti-idle",
-      "path": "macros/roblox/afk-anti-idle",
-      "slug": "afk-anti-idle",
-      "title": "AFK anti-idle",
-      "description": "Taps space every couple of minutes so Roblox never disconnects you for being idle. Runs in the background — you can keep using your Mac.",
-      "details": "Roblox disconnects a session after roughly twenty minutes without input. This macro sends one short space tap, waits, and repeats forever.\n\nIt runs in PID mode, so the key goes to the Roblox process by process id — the window does not need to be focused and your cursor is never moved.\n\nSet \"Seconds between presses\" to anything below the idle timeout; 120 is a safe default. If you are standing somewhere you can fall from, face a wall first — space makes your character jump.",
-      "game": {
-        "name": "Roblox",
-        "title": "Roblox (any experience)",
-        "slug": "roblox",
-        "icon": "🎮",
-        "icon_url": "",
-        "platform": "Roblox",
-        "url": "https://www.roblox.com/"
-      },
-      "tags": [
-        "afk",
-        "anti-idle",
-        "utility",
-        "background"
-      ],
-      "keywords": [
-        "idle",
-        "kick",
-        "disconnect",
-        "twenty minutes",
-        "jump",
-        "space",
-        "farm",
-        "overnight"
-      ],
-      "author": {
-        "name": "AutoKey Studio",
-        "url": "https://sologrinding.com/",
-        "github": ""
-      },
-      "owner": "@autokeystudio",
-      "version": "1.0.0",
-      "versions": [
+          "key": "Count",
+          "var": "Count",
+          "help": "used as a boolean variable",
+          "type": "text",
+          "label": "Count"
+        },
         {
-          "version": "1.0.0",
-          "published_at": "2026-09-10T00:00:00Z",
-          "notes": "First release.",
-          "steps": 3,
-          "author": "AutoKey Studio"
+          "key": "Missing",
+          "var": "Missing",
+          "help": "used to equip rod if missing",
+          "type": "text",
+          "label": "Missing"
         }
       ],
+      "schema": 1,
+      "details": "",
       "license": "MIT",
-      "created_at": "2026-09-10T00:00:00Z",
-      "updated_at": "2026-09-10T00:00:00Z",
+      "version": "1.0.0",
+      "keywords": [
+        "Rod",
+        "reel",
+        "fish",
+        "swim",
+        "fishing",
+        "macro"
+      ],
       "requires": {
-        "mode": "pid",
         "app": "RobloxPlayer",
+        "mode": "pid",
         "platform": "Roblox",
         "app_version": ""
       },
-      "stats": {
-        "steps": 3,
-        "tools": [
-          "loop",
-          "step",
-          "wait"
-        ],
-        "duration": 0
-      },
-      "config": [
-        {
-          "key": "idle_seconds",
-          "label": "Seconds between presses",
-          "type": "number",
-          "default": "120",
-          "help": "Anything under the idle timeout. 120 is safe."
-        }
-      ],
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
+      "created_at": "2026-09-11T01:41:10Z",
       "macro_file": "macro.json",
-      "schema": 1
+      "updated_at": "2026-09-11T01:41:10Z",
+      "description": "fisch macro (this current version only works for default colors, grey line and white bar, also hides roblox to do a background click so you can use your mac while this macros in the background, this can be disabled by disbaling headless display tool at the top of the macro.",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "notes": "",
+          "steps": 240,
+          "author": "XoX",
+          "published_at": "2026-09-11T01:41:09Z"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,102 @@
+{
+  "id": "fisch/fisch-macro-background",
+  "game": {
+    "url": "",
+    "icon": "🐟",
+    "name": "Fisch",
+    "slug": "fisch",
+    "title": "Fisch",
+    "icon_url": "",
+    "platform": "Roblox"
+  },
+  "path": "macros/fisch/fisch-macro-background",
+  "slug": "fisch-macro-background",
+  "tags": [
+    "Fishing",
+    "afk",
+    "auto",
+    "background",
+    "fisch",
+    "roblox"
+  ],
+  "owner": "XoX",
+  "stats": {
+    "steps": 240,
+    "tools": [
+      "bootgroup",
+      "compare",
+      "group",
+      "headless",
+      "loop",
+      "math",
+      "runmode",
+      "step",
+      "trackbar",
+      "variable",
+      "wait",
+      "window"
+    ],
+    "duration": 0
+  },
+  "title": "Fisch Macro (Background)",
+  "author": {
+    "url": "",
+    "name": "XoX",
+    "github": ""
+  },
+  "config": [
+    {
+      "key": "Fish",
+      "var": "Fish",
+      "help": "Amount of fish you have fished so far you can use a discord webhook tool to rely information about progress",
+      "type": "text",
+      "label": "Fish"
+    },
+    {
+      "key": "Count",
+      "var": "Count",
+      "help": "used as a boolean variable",
+      "type": "text",
+      "label": "Count"
+    },
+    {
+      "key": "Missing",
+      "var": "Missing",
+      "help": "used to equip rod if missing",
+      "type": "text",
+      "label": "Missing"
+    }
+  ],
+  "schema": 1,
+  "details": "",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "Rod",
+    "reel",
+    "fish",
+    "swim",
+    "fishing",
+    "macro"
+  ],
+  "requires": {
+    "app": "RobloxPlayer",
+    "mode": "pid",
+    "platform": "Roblox",
+    "app_version": ""
+  },
+  "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
+  "created_at": "2026-09-11T01:41:10Z",
+  "macro_file": "macro.json",
+  "updated_at": "2026-09-11T01:41:10Z",
+  "description": "fisch macro (this current version only works for default colors, grey line and white bar, also hides roblox to do a background click so you can use your mac while this macros in the background, this can be disabled by disbaling headless display tool at the top of the macro.",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "notes": "",
+      "steps": 240,
+      "author": "XoX",
+      "published_at": "2026-09-11T01:41:09Z"
+    }
+  ]
+}
