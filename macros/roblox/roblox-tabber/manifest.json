@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "id": "roblox/roblox-tabber",
+  "path": "macros/roblox/roblox-tabber",
+  "slug": "roblox-tabber",
+  "title": "Roblox Tabber",
+  "description": "Freezes/Tabs Roblox out, can be used for certain situations in experiences, use at your own risk (some games prohibit it)",
+  "details": "",
+  "game": {
+    "name": "Roblox",
+    "title": "Any Game",
+    "slug": "roblox",
+    "icon": "🎮",
+    "icon_url": "",
+    "platform": "Roblox",
+    "url": ""
+  },
+  "thumbnail": "https://images.openai.com/static-rsc-4/W5493ZTfXb0pphmxZ8aeV6VmesK9zri8lwx_IyAovayBGgM-Z2gl3l3it7XYVvBl0woNoL5rzbd_iqzU6p1OUYFDZUzR4Y18Dd2lUuWrb2b7y11aw_sZdz4c0VIjgODvIkslBPXCn7A2fbDpfDWybuGIXd8-7ex9neDE4m0lD1o?purpose=inline",
+  "icon_url": "https://images.openai.com/static-rsc-4/TPae3GB4TBSfvjiarv5UhA_YV0Vi282uoZz7rTJfeJIL69aWyEiBQajkNab7XtCMj7sElIR_Dc_TFZ6N2enqTX5LPwzDTd2Vuo2cPzAWtqVUlth4d3-YS173sfnUPv9UUqGOarDGF0ZuDLe1Ao3gMuwrEK9wMp_7XSwlnhg4e-LDuods445qURjJEg1Kdh4U?purpose=fullsize",
+  "tags": [
+    "Roblox",
+    "Tabbing",
+    "Taber",
+    "Tab",
+    "Freeze",
+    "Freezer",
+    "Desync"
+  ],
+  "keywords": [
+    "Roblox",
+    "Tabbing",
+    "Taber",
+    "Tab",
+    "Freeze",
+    "Freezer",
+    "Desync"
+  ],
+  "author": {
+    "name": "NourEssa",
+    "url": "",
+    "github": ""
+  },
+  "owner": "NourEssa",
+  "version": "1.0.0",
+  "license": "MIT",
+  "requires": {
+    "mode": "pid",
+    "app": "RobloxPlayer",
+    "platform": "Roblox",
+    "app_version": ""
+  },
+  "stats": {
+    "steps": 2,
+    "tools": [
+      "desync"
+    ],
+    "duration": 0
+  },
+  "config": [],
+  "macro_file": "macro.json",
+  "created_at": "2026-09-12T23:54:19Z",
+  "updated_at": "2026-09-12T23:54:19Z",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "notes": "",
+      "steps": 2,
+      "author": "NourEssa",
+      "published_at": "2026-09-12T23:54:19Z"
+    }
+  ],
+  "stars": 0,
+  "pinned": false
+}

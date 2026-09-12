@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-12T17:31:35Z",
-  "count": 1,
+  "generated_at": "2026-09-12T23:54:20Z",
+  "count": 2,
   "repo": {
     "owner": "0NourEssa0",
     "name": "Macros",
@@ -16,9 +16,22 @@
       "icon_url": "",
       "platform": "Roblox",
       "count": 1
+    },
+    {
+      "slug": "roblox",
+      "name": "Roblox",
+      "title": "Any Game",
+      "icon": "🎮",
+      "icon_url": "",
+      "platform": "Roblox",
+      "count": 1
     }
   ],
   "tags": [
+    {
+      "tag": "roblox",
+      "count": 2
+    },
     {
       "tag": "afk",
       "count": 1
@@ -32,6 +45,10 @@
       "count": 1
     },
     {
+      "tag": "Desync",
+      "count": 1
+    },
+    {
       "tag": "fisch",
       "count": 1
     },
@@ -40,27 +57,40 @@
       "count": 1
     },
     {
-      "tag": "roblox",
+      "tag": "Freeze",
+      "count": 1
+    },
+    {
+      "tag": "Freezer",
+      "count": 1
+    },
+    {
+      "tag": "Tab",
+      "count": 1
+    },
+    {
+      "tag": "Tabbing",
+      "count": 1
+    },
+    {
+      "tag": "Taber",
       "count": 1
     }
   ],
   "macros": [
     {
       "id": "fisch/fisch-macro",
+      "game": {
+        "url": "",
+        "icon": "🐟",
+        "name": "Fisch",
+        "slug": "fisch",
+        "title": "Fisch (Roblox)",
+        "icon_url": "",
+        "platform": "Roblox"
+      },
       "path": "macros/fisch/fisch-macro",
       "slug": "fisch-macro",
-      "title": "Fisch Macro",
-      "description": "Macro Used for a popular fishing game, Fisch",
-      "details": "Macro Used for a popular fishing game called Fisch, currently still in beta if you find any bugs / issues please report to the discord server.",
-      "game": {
-        "name": "Fisch",
-        "title": "Fisch (Roblox)",
-        "slug": "fisch",
-        "icon": "🐟",
-        "icon_url": "",
-        "platform": "Roblox",
-        "url": ""
-      },
       "tags": [
         "Fishing",
         "afk",
@@ -69,39 +99,7 @@
         "fisch",
         "roblox"
       ],
-      "keywords": [
-        "Rod",
-        "reel",
-        "fish",
-        "swim",
-        "fishing",
-        "macro"
-      ],
-      "author": {
-        "name": "NourEssa",
-        "url": "",
-        "github": ""
-      },
       "owner": "NourEssa",
-      "version": "1.0.0",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "published_at": "2026-09-12T16:25:53Z",
-          "notes": "If you have any problems please message me on Discord, —> https://discord.com/invite/BDNTyVAcr6",
-          "steps": 31,
-          "author": "NourEssa"
-        }
-      ],
-      "license": "MIT",
-      "created_at": "2026-09-12T16:25:53Z",
-      "updated_at": "2026-09-12T16:25:53Z",
-      "requires": {
-        "mode": "pid",
-        "app": "RobloxPlayer",
-        "platform": "Roblox",
-        "app_version": ""
-      },
       "stats": {
         "steps": 31,
         "tools": [
@@ -119,6 +117,12 @@
           "window"
         ],
         "duration": 0
+      },
+      "title": "Fisch Macro",
+      "author": {
+        "url": "",
+        "name": "NourEssa",
+        "github": ""
       },
       "config": [
         {
@@ -146,12 +150,115 @@
           "default": "False"
         }
       ],
-      "stars": 1,
-      "pinned": true,
-      "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
+      "schema": 1,
+      "details": "Macro Used for a popular fishing game called Fisch, currently still in beta if you find any bugs / issues please report to the discord server.",
+      "license": "MIT",
+      "version": "1.0.0",
       "icon_url": "https://tr.rbxcdn.com/180DAY-42608163534fa8543c98495f24c82fac/768/432/Image/Webp/noFilter",
+      "keywords": [
+        "Rod",
+        "reel",
+        "fish",
+        "swim",
+        "fishing",
+        "macro"
+      ],
+      "requires": {
+        "app": "RobloxPlayer",
+        "mode": "pid",
+        "platform": "Roblox",
+        "app_version": ""
+      },
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
+      "created_at": "2026-09-12T16:25:53Z",
       "macro_file": "macro.json",
-      "schema": 1
+      "updated_at": "2026-09-12T16:25:53Z",
+      "description": "Macro Used for a popular fishing game, Fisch",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "notes": "If you have any problems please message me on Discord, —> https://discord.com/invite/BDNTyVAcr6",
+          "steps": 31,
+          "author": "NourEssa",
+          "published_at": "2026-09-12T16:25:53Z"
+        }
+      ],
+      "stars": 1,
+      "pinned": true
+    },
+    {
+      "schema": 1,
+      "id": "roblox/roblox-tabber",
+      "path": "macros/roblox/roblox-tabber",
+      "slug": "roblox-tabber",
+      "title": "Roblox Tabber",
+      "description": "Freezes/Tabs Roblox out, can be used for certain situations in experiences, use at your own risk (some games prohibit it)",
+      "details": "",
+      "game": {
+        "name": "Roblox",
+        "title": "Any Game",
+        "slug": "roblox",
+        "icon": "🎮",
+        "icon_url": "",
+        "platform": "Roblox",
+        "url": ""
+      },
+      "thumbnail": "https://images.openai.com/static-rsc-4/W5493ZTfXb0pphmxZ8aeV6VmesK9zri8lwx_IyAovayBGgM-Z2gl3l3it7XYVvBl0woNoL5rzbd_iqzU6p1OUYFDZUzR4Y18Dd2lUuWrb2b7y11aw_sZdz4c0VIjgODvIkslBPXCn7A2fbDpfDWybuGIXd8-7ex9neDE4m0lD1o?purpose=inline",
+      "icon_url": "https://images.openai.com/static-rsc-4/TPae3GB4TBSfvjiarv5UhA_YV0Vi282uoZz7rTJfeJIL69aWyEiBQajkNab7XtCMj7sElIR_Dc_TFZ6N2enqTX5LPwzDTd2Vuo2cPzAWtqVUlth4d3-YS173sfnUPv9UUqGOarDGF0ZuDLe1Ao3gMuwrEK9wMp_7XSwlnhg4e-LDuods445qURjJEg1Kdh4U?purpose=fullsize",
+      "tags": [
+        "Roblox",
+        "Tabbing",
+        "Taber",
+        "Tab",
+        "Freeze",
+        "Freezer",
+        "Desync"
+      ],
+      "keywords": [
+        "Roblox",
+        "Tabbing",
+        "Taber",
+        "Tab",
+        "Freeze",
+        "Freezer",
+        "Desync"
+      ],
+      "author": {
+        "name": "NourEssa",
+        "url": "",
+        "github": ""
+      },
+      "owner": "NourEssa",
+      "version": "1.0.0",
+      "license": "MIT",
+      "requires": {
+        "mode": "pid",
+        "app": "RobloxPlayer",
+        "platform": "Roblox",
+        "app_version": ""
+      },
+      "stats": {
+        "steps": 2,
+        "tools": [
+          "desync"
+        ],
+        "duration": 0
+      },
+      "config": [],
+      "macro_file": "macro.json",
+      "created_at": "2026-09-12T23:54:19Z",
+      "updated_at": "2026-09-12T23:54:19Z",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "notes": "",
+          "steps": 2,
+          "author": "NourEssa",
+          "published_at": "2026-09-12T23:54:19Z"
+        }
+      ],
+      "stars": 0,
+      "pinned": false
     }
   ]
 }

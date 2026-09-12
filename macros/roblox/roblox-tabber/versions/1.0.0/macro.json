@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "desync",
+    "mode": "hold",
+    "app": "Roblox",
+    "seconds": 10,
+    "combo": [
+      "j"
+    ],
+    "preset": "flaky"
+  },
+  {
+    "kind": "desync",
+    "mode": "hold",
+    "app": "Roblox",
+    "seconds": 10,
+    "combo": [
+      "shift",
+      "j"
+    ],
+    "preset": "flaky"
+  }
+]
