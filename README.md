@@ -18,7 +18,7 @@ macros/<game-slug>/<macro-slug>/
 ```
 
 One folder per macro, grouped by game. The folder path *is* the macro's id:
-`macros/roblox/afk-anti-idle` → `roblox/afk-anti-idle`.
+`macros/fisch/fisch-macro` → `fisch/fisch-macro`.
 
 **Every version is kept.** Publishing an update adds a `versions/<v>/` folder and
 moves the top-level copy forward; it never rewrites or removes an older release.
@@ -48,8 +48,15 @@ The server is also what enforces the rules that keep the library honest:
 - `author` and `owner` are stamped from the signed-in account, so nobody can
   publish under someone else's name.
 
-Nobody pushes to this repository by hand. If a manifest does need repairing
-directly, regenerate the catalogue afterwards:
+**This repository is the only store.** The server keeps no copy of the library in
+a database: ownership, versions, stars and pins are all read from the files here,
+and every publish rebuilds `index.json` from the macro folders that actually exist.
+So a macro folder added by hand on github.com is listed, and a folder deleted here
+is gone from the app. A hand-added `manifest.json` needs an `owner` for anyone to
+publish updates to it from the app; without one it can only be changed here.
+
+To refresh the catalogue straight after a hand edit, without waiting for the next
+publish:
 
 ```bash
 python3 tools/build_macro_index.py ~/Documents/AutoKeyStudio-Macros

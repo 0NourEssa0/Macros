@@ -26,7 +26,7 @@ unknown field is preserved but ignored.
 | `author.name` | string | The publishing account. **Stamped by the server** — not read from the app. |
 | `author.url` | string | Link shown on the detail page. |
 | `author.github` | string | GitHub handle, if you want the credit. |
-| `owner` | string | The account that owns the listing; only it may publish updates. **Stamped by the server.** An owner starting with `@` is a reserved official listing. |
+| `owner` | string | The account that owns the listing; only it may publish updates. **Stamped by the server**, which reads it back from this file to check the next publish. An owner starting with `@` is a reserved official listing, and a listing with no owner can only be changed in the repo. |
 | `version` | string | The latest release, e.g. `1.0.0`. Bump it and the app offers everyone an **Update**. |
 | `versions` | object[] | Every release, newest first. See below. |
 | `stars` | number | How many people have starred it — the length of this macro's list in `stars.json`. Written by the server when it flushes; edit `stars.json` instead. |
@@ -41,7 +41,7 @@ account starring twice, and it is why stars need no database at all.
 {
   "schema": 1,
   "generated_at": "2026-09-11T02:14:00Z",
-  "macros": { "fisch/fisch-macro-background": ["XoX"] }
+  "macros": { "fisch/fisch-macro": ["NourEssa"] }
 }
 ```
 
