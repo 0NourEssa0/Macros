@@ -1,0 +1,317 @@
+[
+  {
+    "kind": "bootgroup",
+    "name": "Boost",
+    "speed": 1,
+    "collapsed": false,
+    "children": [
+      {
+        "kind": "window",
+        "app": "Roblox",
+        "x": 712,
+        "y": 33,
+        "w": 800,
+        "h": 628,
+        "unit": "px",
+        "launch": false,
+        "maximize": false
+      },
+      {
+        "kind": "window",
+        "app": "AutoKey Studio",
+        "x": -142,
+        "y": 32,
+        "w": 960,
+        "h": 888,
+        "unit": "px",
+        "launch": false,
+        "maximize": true
+      },
+      {
+        "kind": "variable",
+        "name": "Fish",
+        "vkind": "number",
+        "expr": "0"
+      },
+      {
+        "kind": "variable",
+        "name": "Count",
+        "vkind": "string",
+        "expr": "False"
+      },
+      {
+        "kind": "variable",
+        "name": "Missing",
+        "vkind": "number",
+        "expr": "False"
+      },
+      {
+        "kind": "runmode",
+        "mode": "pid",
+        "proc": "Roblox",
+        "delivery": "warp",
+        "ret": "full",
+        "lock": false
+      },
+      {
+        "kind": "headless",
+        "action": "park",
+        "app": "Roblox",
+        "hotkey": [
+          "cmd",
+          "l"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "group",
+    "name": "Main Logic",
+    "speed": 1,
+    "collapsed": false,
+    "children": [
+      {
+        "kind": "fisch",
+        "model": "Olympian",
+        "x": 408,
+        "y": 544,
+        "nx": 0.2976190476190476,
+        "ny": 0.8584521384928717,
+        "w": 340,
+        "h": 1,
+        "interval": 0.01,
+        "app": "Roblox",
+        "input": "space",
+        "pressKey": "space",
+        "cfg": {
+          "aim": 0.3,
+          "minDwell": 0.005,
+          "lostSecs": 0.4,
+          "graceSecs": 1.2,
+          "resumeSecs": 6,
+          "enterFrames": 2,
+          "horizon": 0.15,
+          "rate": 120,
+          "maxFps": 240
+        },
+        "trace": true,
+        "stalled": true,
+        "stallSecs": 1.5,
+        "missingChildren": [
+          {
+            "kind": "wait",
+            "seconds": 1
+          },
+          {
+            "kind": "compare",
+            "left": "Count",
+            "op": "==",
+            "right": "True",
+            "interval": 0,
+            "thenChildren": [
+              {
+                "kind": "math",
+                "target": "Fish",
+                "expr": "Fish + 1 "
+              },
+              {
+                "kind": "variable",
+                "name": "Count",
+                "vkind": "string",
+                "expr": "True"
+              },
+              {
+                "kind": "variable",
+                "name": "Missing",
+                "vkind": "number",
+                "expr": "0"
+              }
+            ],
+            "elseChildren": [
+              {
+                "kind": "math",
+                "target": "Missing",
+                "expr": "Missing + 1 "
+              },
+              {
+                "kind": "compare",
+                "left": "Missing",
+                "op": ">=",
+                "right": "1",
+                "interval": 0,
+                "thenChildren": [
+                  {
+                    "kind": "step",
+                    "data": {
+                      "type": "key",
+                      "event": "hold",
+                      "key": "1",
+                      "time": 0,
+                      "duration": 0.2
+                    }
+                  },
+                  {
+                    "kind": "step",
+                    "data": {
+                      "type": "key",
+                      "event": "hold",
+                      "key": "n",
+                      "time": 0.5,
+                      "duration": 0.2
+                    }
+                  },
+                  {
+                    "kind": "step",
+                    "data": {
+                      "type": "key",
+                      "event": "hold",
+                      "key": "1",
+                      "time": 0.75,
+                      "duration": 0.2
+                    }
+                  },
+                  {
+                    "kind": "variable",
+                    "name": "Missing",
+                    "vkind": "number",
+                    "expr": "0"
+                  }
+                ],
+                "elseChildren": []
+              }
+            ]
+          },
+          {
+            "kind": "runmode",
+            "mode": "pid",
+            "proc": "Roblox",
+            "delivery": "warp",
+            "ret": "full",
+            "lock": false
+          },
+          {
+            "kind": "step",
+            "data": {
+              "type": "mouse",
+              "event": "click",
+              "x": 1134,
+              "y": 343,
+              "button": "Button.left",
+              "pressed": true,
+              "time": 0.2,
+              "nx": 0.6302135003306878,
+              "ny": 0.29373647530549896,
+              "wf": {
+                "app": "Discord",
+                "fx": 0.6302135003306878,
+                "fy": 0.29373647530549896
+              }
+            }
+          },
+          {
+            "kind": "step",
+            "data": {
+              "type": "mouse",
+              "event": "click",
+              "x": 1134,
+              "y": 343,
+              "button": "Button.left",
+              "pressed": false,
+              "time": 0.7,
+              "nx": 0.6302135003306878,
+              "ny": 0.29373647530549896,
+              "wf": {
+                "app": "Discord",
+                "fx": 0.6302135003306878,
+                "fy": 0.29373647530549896
+              }
+            }
+          }
+        ],
+        "endChildren": [
+          {
+            "kind": "variable",
+            "name": "Count",
+            "vkind": "string",
+            "expr": "True"
+          }
+        ],
+        "stalledChildren": [
+          {
+            "kind": "compare",
+            "left": "Count",
+            "op": "==",
+            "right": "True",
+            "interval": 0,
+            "thenChildren": [
+              {
+                "kind": "math",
+                "target": "Fish",
+                "expr": "Fish + 1 "
+              },
+              {
+                "kind": "variable",
+                "name": "Count",
+                "vkind": "string",
+                "expr": "False"
+              }
+            ],
+            "elseChildren": []
+          },
+          {
+            "kind": "runmode",
+            "mode": "pid",
+            "proc": "Roblox",
+            "delivery": "warp",
+            "ret": "full",
+            "lock": false
+          },
+          {
+            "kind": "step",
+            "data": {
+              "type": "mouse",
+              "event": "click",
+              "x": 1134,
+              "y": 343,
+              "button": "Button.left",
+              "pressed": true,
+              "time": 0.2,
+              "nx": 0.6302135003306878,
+              "ny": 0.29373647530549896,
+              "wf": {
+                "app": "Discord",
+                "fx": 0.6302135003306878,
+                "fy": 0.29373647530549896
+              }
+            }
+          },
+          {
+            "kind": "step",
+            "data": {
+              "type": "mouse",
+              "event": "click",
+              "x": 1134,
+              "y": 343,
+              "button": "Button.left",
+              "pressed": false,
+              "time": 0.7,
+              "nx": 0.6302135003306878,
+              "ny": 0.29373647530549896,
+              "wf": {
+                "app": "Discord",
+                "fx": 0.6302135003306878,
+                "fy": 0.29373647530549896
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "loop",
+    "count": "inf",
+    "speed": 1,
+    "wait": 0
+  }
+]
