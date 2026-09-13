@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-13T00:00:39Z",
+  "generated_at": "2026-09-13T22:09:48Z",
   "count": 2,
   "repo": {
     "owner": "0NourEssa0",
@@ -79,18 +79,24 @@
   ],
   "macros": [
     {
+      "schema": 1,
       "id": "fisch/fisch-macro",
-      "game": {
-        "url": "",
-        "icon": "🐟",
-        "name": "Fisch",
-        "slug": "fisch",
-        "title": "Fisch (Roblox)",
-        "icon_url": "",
-        "platform": "Roblox"
-      },
       "path": "macros/fisch/fisch-macro",
       "slug": "fisch-macro",
+      "title": "Fisch Macro",
+      "description": "Macro Used for a popular fishing game, Fisch\nInside the model dropdown please make a new model for each fishing rod as the ai needs to learn and understand each rod (bar size).",
+      "details": "Macro Used for a popular fishing game called Fisch, currently still in beta if you find any bugs / issues please report to the discord server.",
+      "game": {
+        "name": "Fisch",
+        "title": "Fisch (Roblox)",
+        "slug": "fisch",
+        "icon": "🐟",
+        "icon_url": "",
+        "platform": "Roblox",
+        "url": ""
+      },
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
+      "icon_url": "https://tr.rbxcdn.com/180DAY-42608163534fa8543c98495f24c82fac/768/432/Image/Webp/noFilter",
       "tags": [
         "Fishing",
         "afk",
@@ -99,15 +105,37 @@
         "fisch",
         "roblox"
       ],
+      "keywords": [
+        "Rod",
+        "reel",
+        "fish",
+        "swim",
+        "fishing",
+        "macro"
+      ],
+      "author": {
+        "name": "NourEssa",
+        "url": "",
+        "github": ""
+      },
       "owner": "NourEssa",
+      "version": "1.0.1",
+      "license": "MIT",
+      "requires": {
+        "mode": "pid",
+        "app": "RobloxPlayer",
+        "platform": "Roblox",
+        "app_version": ""
+      },
       "stats": {
-        "steps": 31,
+        "steps": 39,
         "tools": [
           "bootgroup",
           "compare",
           "fisch",
           "group",
           "headless",
+          "launcher",
           "loop",
           "math",
           "runmode",
@@ -118,63 +146,43 @@
         ],
         "duration": 0
       },
-      "title": "Fisch Macro",
-      "author": {
-        "url": "",
-        "name": "NourEssa",
-        "github": ""
-      },
       "config": [
         {
           "key": "Fish",
           "var": "Fish",
-          "help": "Used to Count how many fishes you have currently done, you can pair this with the discord webhook tool to track progress.",
-          "type": "number",
           "label": "Fish",
-          "default": "0"
+          "help": "Used to Count how many fishes you have currently done, you can pair this with the discord webhook tool to track progress.",
+          "default": "0",
+          "type": "number"
         },
         {
           "key": "Count",
           "var": "Count",
-          "help": "Used to aide the fish and missing variable as a boolean value",
-          "type": "text",
           "label": "Count",
-          "default": "False"
+          "help": "Used to aid the fish and missing variable as a boolean value",
+          "default": "False",
+          "type": "text"
         },
         {
           "key": "Missing",
           "var": "Missing",
-          "help": "if it detects something goes wrong the rod will be reequipped again.",
-          "type": "number",
           "label": "Missing",
-          "default": "False"
+          "help": "if it detects something goes wrong the rod will be reequipped again.",
+          "default": "0",
+          "type": "number"
         }
       ],
-      "schema": 1,
-      "details": "Macro Used for a popular fishing game called Fisch, currently still in beta if you find any bugs / issues please report to the discord server.",
-      "license": "MIT",
-      "version": "1.0.0",
-      "icon_url": "https://tr.rbxcdn.com/180DAY-42608163534fa8543c98495f24c82fac/768/432/Image/Webp/noFilter",
-      "keywords": [
-        "Rod",
-        "reel",
-        "fish",
-        "swim",
-        "fishing",
-        "macro"
-      ],
-      "requires": {
-        "app": "RobloxPlayer",
-        "mode": "pid",
-        "platform": "Roblox",
-        "app_version": ""
-      },
-      "thumbnail": "https://tr.rbxcdn.com/180DAY-17ce753c4b1f087c5eda362c24457e25/768/432/Image/Webp/noFilter",
-      "created_at": "2026-09-12T16:25:53Z",
       "macro_file": "macro.json",
-      "updated_at": "2026-09-12T16:25:53Z",
-      "description": "Macro Used for a popular fishing game, Fisch",
+      "created_at": "2026-09-12T16:25:53Z",
+      "updated_at": "2026-09-13T22:09:47Z",
       "versions": [
+        {
+          "version": "1.0.1",
+          "notes": "",
+          "steps": 39,
+          "author": "NourEssa",
+          "published_at": "2026-09-13T22:09:47Z"
+        },
         {
           "version": "1.0.0",
           "notes": "If you have any problems please message me on Discord, —> https://discord.com/invite/BDNTyVAcr6",
